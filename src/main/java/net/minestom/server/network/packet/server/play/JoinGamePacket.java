@@ -52,6 +52,8 @@ public record JoinGamePacket(int entityId, boolean isHardcore, GameMode gameMode
         writer.writeBoolean(isDebug);
         //is flat
         writer.writeBoolean(isFlat);
+
+        writer.writeBoolean(false);
     }
 
     @Override
