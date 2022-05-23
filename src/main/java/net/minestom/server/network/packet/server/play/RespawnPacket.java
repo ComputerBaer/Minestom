@@ -26,6 +26,8 @@ public record RespawnPacket(String dimensionType, String worldName,
         writer.writeBoolean(isDebug);
         writer.writeBoolean(isFlat);
         writer.writeBoolean(copyMeta);
+
+        writer.writeBoolean(false);
     }
 
     @Override

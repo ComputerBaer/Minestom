@@ -56,7 +56,7 @@ public sealed class ClientPacketsHandler permits ClientPacketsHandler.Status, Cl
             register(0x01, ClientQueryBlockNbtPacket::new);
             // 0x02 difficulty packet
             // 0x03 chat command
-            // 0x04 chat message
+            register(0x04, ClientChatMessagePacket::new);
             // 0x05 chat preview
             register(0x06, ClientStatusPacket::new);
             register(0x07, ClientSettingsPacket::new);

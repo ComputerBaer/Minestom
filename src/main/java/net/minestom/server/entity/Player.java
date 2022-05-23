@@ -659,7 +659,7 @@ public class Player extends LivingEntity implements CommandSender, Localizable, 
      * @param message the message that the player will send
      */
     public void chat(@NotNull String message) {
-        addPacketToQueue(new ClientChatMessagePacket(message));
+        addPacketToQueue(new ClientChatMessagePacket(message, 0, 0, new byte[0], false));
     }
 
     @Override
