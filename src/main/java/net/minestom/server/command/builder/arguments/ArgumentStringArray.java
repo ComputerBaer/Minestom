@@ -29,7 +29,7 @@ public class ArgumentStringArray extends Argument<String[]> {
     public void processNodes(@NotNull NodeMaker nodeMaker, boolean executable) {
         DeclareCommandsPacket.Node argumentNode = simpleArgumentNode(this, executable, false, false);
 
-        argumentNode.parser = CONTAINER.toId("brigadier:string");
+        argumentNode.parser = "brigadier:string";
         argumentNode.properties = BinaryWriter.makeArray(packetWriter -> {
             packetWriter.writeVarInt(2); // Greedy phrase
         });

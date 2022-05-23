@@ -64,7 +64,7 @@ public class ArgumentTime extends Argument<Duration> {
     @Override
     public void processNodes(@NotNull NodeMaker nodeMaker, boolean executable) {
         DeclareCommandsPacket.Node argumentNode = simpleArgumentNode(this, executable, false, false);
-        argumentNode.parser = CONTAINER.toId("minecraft:time");
+        argumentNode.parser = "minecraft:time";
 
         nodeMaker.addNodes(new DeclareCommandsPacket.Node[]{argumentNode});
     }
